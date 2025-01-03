@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/mono-repo/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/mono-repo/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/mono-repo",
+  "projects": {
+    "mono-repo": {
+      "type": "application",
+      "root": "apps/mono-repo",
+      "entryFile": "main",
+      "sourceRoot": "apps/mono-repo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mono-repo/tsconfig.app.json"
+      }
+    },
+    "users-svc": {
+      "type": "application",
+      "root": "apps/users-svc",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-svc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-svc/tsconfig.app.json"
+      }
+    },
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "task-svc": {
+      "type": "application",
+      "root": "apps/task-svc",
+      "entryFile": "main",
+      "sourceRoot": "apps/task-svc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/task-svc/tsconfig.app.json"
+      }
+    }
+  }
+}
